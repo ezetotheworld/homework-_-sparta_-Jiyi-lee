@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>철이네 콩이</title>
+    <!-- JQuery를 import 합니다 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function orderfunction() 
+        {
+            let question1=$('#q1').val();
+            let question2=$('#q2').val();
+            let question3=$('#q3').val();
+            let question4=$('#q4').val();
+            if (question1=='') 
+                {alert("공란이 있어요! 주문정보를 확인해주세요!");
+                $('#q1').css("border-color","red");
+                }  
+            else if (question2=='')
+                {alert ("공란이 있어요! 주문정보를 확인해주세요!");
+                $('#q1').css("border-color","red");
+                $('#q2').css("border-color","red");
+                }
+            else if (question3=='')
+                {alert ("공란이 있어요! 주문정보를 확인하세요!");
+                $('#q1').css("border-color","red");
+                $('#q2').css("border-color","red");
+                $('#q3').css("border-color","red");
+                }
+            else if (question4=='')
+                {alert ("공란이 있어요! 주문정보를 확인하세요!");
+                $('#q1').css("border-color","red");
+                $('#q2').css("border-color","red");
+                $('#q3').css("border-color","red");
+                $('#q4').css("border-color","red");
+                }                 }
+    </script>
+    <style>
+        body {text-align: center; display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;}
+        *{
+            font-family: 'Do Hyeon', sans-serif;
+        }
+        .title {text-align: center;}
+        .warning.red {border-color: red, 1px}
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<body, class='card'>
+    <!--상품사진-->
+    <div>
+    <image src="/Users/mac/Desktop/spartacoding/class/PETSK.png" alt="반려견을 위한 마스크" width= 300 px, height= 300 px border-radius=10px> </image>
+    <image src="Users/mac/Desktop/spartacoding/class/PETSK.png" alt="반려견을 위한 마스크" width= 300 px, height= 300 px border-radius=10px> </image>
+    </div>
+    <!--상품소개-->
+    <div>
+    <h1>웹페이지 소개</h1>
+    강아지도 스마트해지는 시대를 열어갑니다. 
+    <p>똑똑한 콩이네:https://smartstore.naver.com/kong2pet</p>   
+    <h1> 상품소개 </h1> 
+    <p>"나는 마스크쓰면 되는데, 우리 강아지는 어떡하죠?" </p>
+    외출하기 망설여지는 요즘,반려견에게도 마스크를 주세요. 
+    <p>미세먼지로부터, 비말로부터 지켜주는 KF94 강아지용 마스크</p>
+    </div>
+    <!--구매정보-->
+    <div>
+    <h1> 주문하기 </h1>
+    </div>
+    <div>
+    <p>
+        주문자 성함: <input id="q1" type="text">
+    </p>
+    </div>
+    <div>
+    <p>
+        수량: 
+        <!--<select id="number of order">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+          /*** for문으로 작성 ****/ -->
+         <select id="q2" class='form-control' placeholder="수량을 선택하세요" >
+          <script> for (let i=1; i<=50; i++)
+          {document.write("<option>"+i+"</option>");} </script>
+          </select> 
+    </p> 
+    </div>   
+    <div>
+    <p>
+        주소: <input id='q3' type="text">
+    </p>
+    </div>
+    <div>  
+    <p>
+        전화번호: <input id='q4' type="text">
+    </p>
+</div>
+    <div class='title'>
+        <button onclick='orderfunction()'type="button">주문하기!</button>
+    </div>
+
+</body>
+</html>
